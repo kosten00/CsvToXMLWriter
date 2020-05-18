@@ -44,7 +44,6 @@ public class Converter {
                 }
             }
 
-            //write the content into xml file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
@@ -53,7 +52,6 @@ public class Converter {
             transformer.transform(source, result);
 
             System.out.println("Done");
-
         } catch (FileNotFoundException | ParserConfigurationException | TransformerConfigurationException e) {
             System.out.println("File was not found!");
         } catch (TransformerException e) {
